@@ -15,3 +15,6 @@
  - https://juejin.im/post/5a4dca1d518825128654fa78
 
 https://juejin.im/post/5d00aa5e5188255a57151c8a#heading-12
+
+## 任务
+- 完善 usingComponents，MinaWebpackPlugin 处理 usingComponents 路径有问题，查看源码解决

@@ -13,10 +13,13 @@ function itemToPlugin(context, item, name) {
 }
 
 function _inflateEntries(entries = [], dirname, entry) {
+  // 获取  index.json 路径
   const configFile = replaceExt(entry, '.json')
+  // 读取 index.json
   const content = fs.readFileSync(configFile, 'utf8')
   const config = JSON.parse(content)
 
+  // 根据 json 配置的路径递归解析 'pages', 'usingComponents' 增加入口
   ;['pages', 'usingComponents'].forEach(key => {
     const items = config[key]
     if (typeof items === 'object') {
